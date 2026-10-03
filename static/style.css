@@ -11,14 +11,21 @@ body {
     background-color: var(--abitwhite);
 }
 
+.app-header {
+    font-family: 'Open Sauce Sans', sans-serif;
+}
+
 .app-header h3 {
     color: var(--abitblack);
-    font-size: 25px;
-    font-family: 'Open Sauce Sans', sans-serif; 
+    font-size: 20px;
+    margin-left: 3vw; 
+    margin-top: 3vw;
 }
 
 .app-header p {
     color: var(--abitorange);
-    font-size: 17px;
-    font-family: 'Open Sauce Sans', sans-serif; 
+    font-size: 12px;
+    margin-left: 3vw;
+    margin-top: -1.5vw;
 }
+
