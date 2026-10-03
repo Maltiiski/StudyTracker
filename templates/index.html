@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     </head>
     <body>
+        <!--Page1-->
         <header class="app-header">
             <h3>StudyTrackerbyAr</h3>
             <p>Tracked sessions, tracked future</p>
@@ -26,6 +27,27 @@
             <hr>
             <h4 id="break-timer">Next break in: 0 minutes</h4>
         </main>
+
+        <!--Page2-->
+        <div class="subjectnstatpage">
+            <div class="daily-stats">
+
+            </div>
+            <div class="subjectspick">
+
+            </div>
+        </div>
+
+        <!--Page3-->
+        <div class="statpage">
+            <div class="weekly-stats">
+
+            </div>
+            <div class="weekly-subjects">
+                
+            </div>
+        </div>
+
         <script src="{{ url_for('static', filename='script.js') }}"></script>
     </body>
 </html>
