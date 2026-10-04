@@ -61,6 +61,7 @@ section {
     height: 2.5px;
     border: none;
     background: var(--abitblack);
+    margin-top: 4vh;
 }
 
 .dashboard h2 {
@@ -94,6 +95,7 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: -5vh;
 }
 
 .active-control {
@@ -101,4 +103,22 @@ section {
     flex-direction: row;
     gap: 50px;
     justify-content: center;
+}
+
+.control .btn {
+    display: none;
+}
+
+.control.state-idle #start-btn {
+    display: inline-block;
+}
+
+.control.state-running #pause-btn, 
+.control.state-running #stop-btn {
+    display: inline-block;
+}
+
+.control.state-paused #resume-btn,
+.control.state-paused #stop-btn {
+    display: inline-block;
 }
