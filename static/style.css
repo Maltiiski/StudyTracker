@@ -73,6 +73,7 @@ section {
 #pickedsubject {
     color: var(--abitorange);
     font-size: 55px;
+    margin-top: 2vh;
 }
 
 #timer {
@@ -95,18 +96,19 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: -5vh;
+    margin-top: -3vh;
 }
 
 .active-control {
     display: flex;
     flex-direction: row;
-    gap: 50px;
+    gap: 130px;
     justify-content: center;
 }
 
 .control .btn {
     display: none;
+    min-width: 170px;
 }
 
 .control.state-idle #start-btn {
@@ -121,4 +123,10 @@ section {
 .control.state-paused #resume-btn,
 .control.state-paused #stop-btn {
     display: inline-block;
+}
+
+#break-timer {
+    font-weight: 400;
+    font-size: 1.3rem;
+    color: var(--abitblack);
 }
