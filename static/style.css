@@ -81,3 +81,24 @@ section {
     margin-top: -4vh;
     margin-bottom: -3vh;
 }
+
+.btn {
+    background-color: var(--abitblue);
+    color: var(--abitwhite);
+    border: none;
+    border-radius: 5px;
+    font-size: 40px;
+}
+
+.control {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.active-control {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    justify-content: center;
+}
