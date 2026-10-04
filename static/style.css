@@ -1,5 +1,9 @@
 @import url('https://fonts.cdnfonts.com/css/open-sauce-one');
 
+* {
+    box-sizing: border-box;
+}
+
 :root {
     --abitwhite: #f5f5f5;
     --abitblack: #303841;
@@ -9,6 +13,22 @@
 
 body {
     background-color: var(--abitwhite);
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.page-one {
+    background-color: var(--abitwhite);
+}
+
+.page-two {
+    background-color: var(--abitblue);
 }
 
 .app-header {
@@ -18,15 +38,15 @@ body {
 .app-header h3 {
     color: var(--abitblack);
     font-size: 20px;
-    margin-left: 3vw; 
-    margin-top: 3vw;
+    margin-left: 6vh; 
+    margin-top: 6vh;
 }
 
 .app-header p {
     color: var(--abitorange);
     font-size: 12px;
-    margin-left: 3vw;
-    margin-top: -1.5vw;
+    margin-left: 6vh;
+    margin-top: -2.5vh;
 }
 
 .dashboard {
@@ -37,7 +57,7 @@ body {
 }
 
 .dashboard hr {
-    width: 100%;
+    width: 50vw;
     height: 2.5px;
     border: none;
     background: var(--abitblack);
@@ -58,6 +78,6 @@ body {
     color: var(--abitorange);
     font-weight: 400;
     font-size: 130px;
-    margin-top: -1vw;
-    margin-bottom: -3vw;
+    margin-top: -4vh;
+    margin-bottom: -3vh;
 }

@@ -8,45 +8,53 @@
     </head>
     <body>
         <!--Page1-->
-        <header class="app-header">
-            <h3>StudyTrackerbyAr</h3>
-            <p>Tracked sessions, tracked future</p>
-        </header>
-        <main class="dashboard">
-            <h2>Today's Study</h2>
-            <h1 id="timer">00 : 00 : 00</h1>
-            <h2 id="pickedsubject">Not Selected</h2>
+        <section class="page-one">
+            <header class="app-header">
+                <h3>StudyTrackerbyAr</h3>
+                <p>Tracked sessions, tracked future</p>
+            </header>
+            <main class="dashboard">
+                <h2>Today's Study</h2>
+                <h1 id="timer">00 : 00 : 00</h1>
+                <h2 id="pickedsubject">Not Selected</h2>
 
-            <div class="control">
-                <button id="start-btn">Start Session</button>
-                <div class="active-control">
-                    <button id="pause-btn">Pause</button>
-                    <button id="stop=btn">Stop</button>
+                <div class="control">
+                    <button id="start-btn">Start Session</button>
+                    <div class="active-control">
+                        <button id="pause-btn">Pause</button>
+                        <button id="stop=btn">Stop</button>
+                    </div>
+                </div>
+                <hr>
+                <h4 id="break-timer">Next break in: 0 minutes</h4>
+            </main>
+        </section>
+        
+        <!--Page2-->
+        <section class="page-two">
+            <div class="subjectnstatpage">
+                <div class="daily-stats">
+
+                </div>
+                <div class="subjectspick">
+
                 </div>
             </div>
-            <hr>
-            <h4 id="break-timer">Next break in: 0 minutes</h4>
-        </main>
-
-        <!--Page2-->
-        <div class="subjectnstatpage">
-            <div class="daily-stats">
-
-            </div>
-            <div class="subjectspick">
-
-            </div>
-        </div>
+        </section>
+        
 
         <!--Page3-->
-        <div class="statpage">
-            <div class="weekly-stats">
+        <section class="page-three">
+            <div class="statpage">
+                <div class="weekly-stats">
 
+                </div>
+                <div class="weekly-subjects">
+        
+                </div>
             </div>
-            <div class="weekly-subjects">
-    
-            </div>
-        </div>
+        </section>
+
 
         <script src="{{ url_for('static', filename='script.js') }}"></script>
     </body>
