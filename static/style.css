@@ -165,3 +165,10 @@ section {
     border-radius: 15px;
 }
 
+#totalhour-day {
+    margin-top: 1.7vh;
+    color: var(--abitblack);
+    font-weight: 400;
+    font-size: 2.5rem;
+}
+
