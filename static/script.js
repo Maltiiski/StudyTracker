@@ -26,3 +26,6 @@ document.getElementById('stop-btn').addEventListener('click', () => {
     state = 0
 });
 
+document.getElementById('sendsubjbtn').addEventListener('click', () => {
+    
+});
