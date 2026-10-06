@@ -222,3 +222,16 @@ section {
     font-weight: 380;
 }
 
+.statweeklies {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.weekly-stats {
+    display: inline-block;
+}
+
+.weekly-subjects {
+    display: inline-block;
+}
