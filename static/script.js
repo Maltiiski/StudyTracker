@@ -27,5 +27,10 @@ document.getElementById('stop-btn').addEventListener('click', () => {
 });
 
 document.getElementById('sendsubjbtn').addEventListener('click', () => {
-    
+    const selcRadio = document.querySelector('input[name="subj-opt"]:checked');
+    if  (selcRadio) {
+        subject = selcRadio.value
+    else
+        alert('Please select an option first!')
+    }
 });
