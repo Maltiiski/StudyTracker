@@ -226,12 +226,22 @@ section {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    gap: 2vw;
+    margin-top: 23vh;
 }
 
 .weekly-stats {
     display: inline-block;
+    background-color: var(--abitblue);
+    min-width: 50vw;
+    min-height: 65vh;
+    border-radius: 15px;
 }
 
 .weekly-subjects {
     display: inline-block;
+    background-color: var(--abitblue);
+    min-width: 20vw;
+    min-height: 65vh;
+    border-radius: 15px;
 }
