@@ -220,7 +220,11 @@ section {
     font-size: 1.6rem;
 }
 
-
+#sendsubjbtn {
+    margin: auto;
+    min-width: 17vw;
+    font-size: 2rem;
+}
 
 /* Page 3 */
 .page-three {
