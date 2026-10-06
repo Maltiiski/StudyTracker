@@ -208,3 +208,17 @@ section {
 }
 
 /* Page 3 */
+.page-three {
+    position: relative;
+    background-color: var(--abitwhite);
+}
+
+.p3t {
+    margin-top: 15vh;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.6rem;
+    font-weight: 380;
+}
+
