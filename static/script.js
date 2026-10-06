@@ -30,7 +30,7 @@ document.getElementById('sendsubjbtn').addEventListener('click', () => {
     const selcRadio = document.querySelector('input[name="subj-opt"]:checked');
     if  (selcRadio) {
         subject = selcRadio.value
-    else
+    } else {
         alert('Please select an option first!')
     }
 });
