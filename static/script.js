@@ -1,5 +1,6 @@
 const controls = document.querySelector('.control');
 let state = 0 /*0=idle,1=running,2=paused */
+let subject
 
 function setTimerState(state) {
     controls.className = `control state-${state}`;
@@ -24,3 +25,4 @@ document.getElementById('stop-btn').addEventListener('click', () => {
     setTimerState('idle')
     state = 0
 });
+
