@@ -46,7 +46,7 @@ document.getElementById('sendsubjbtn').addEventListener('click', () => {
         } else if (subject=='Natscie') {
             subjpicked.textContent = 'Natural Sciences'
         } else if (subject=='Sostud') {
-            subjpicked.textContent = 'Sosial Studies'
+            subjpicked.textContent = 'Social Studies'
         }
     } else {
         subjpicked.textContent = 'Not Selected'
