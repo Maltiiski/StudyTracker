@@ -53,3 +53,13 @@ document.getElementById('sendsubjbtn').addEventListener('click', () => {
     }
 });
 
+let startTime = 0;
+let elapsedTime = 0;
+let timerInterval = null;
+
+const TimerDisplay = document.getElementById('timer');
+const Startbtn = document.getElementById('start-btn');
+const Pausebtn = document.getElementById('pause-btn');
+const Resumebtn = document.getElementById('resume-btn');
+const Stopbtn = document.getElementById('stop-btn');
+
