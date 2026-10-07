@@ -72,3 +72,12 @@ function formatTime(ms) {
     const pad = (num) => String(num).padStart(2, "0");
     return `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`;
 }
+
+function startTimer() {
+    startTime = performance.now() - elapsedTime;
+
+    timerInterval = setInterval(() => {
+        elapsedTime = performance.now() - startTime;
+        TimerDisplay.textContent = formatTime(elapsedTime);
+    }, 1000);
+}
