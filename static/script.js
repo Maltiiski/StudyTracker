@@ -52,3 +52,4 @@ document.getElementById('sendsubjbtn').addEventListener('click', () => {
         subjpicked.textContent = 'Not Selected'
     }
 });
+
