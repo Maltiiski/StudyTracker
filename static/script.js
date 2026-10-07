@@ -63,3 +63,12 @@ const Pausebtn = document.getElementById('pause-btn');
 const Resumebtn = document.getElementById('resume-btn');
 const Stopbtn = document.getElementById('stop-btn');
 
+function formatTime(ms) {
+    const totalsec = Math.floor(ms / 1000);
+    const hours = Math.floor(totalsec / 3600);
+    const minutes = Math.floor((totalsec % 3600) / 60);
+    const seconds = totalsec % 60;
+
+    const pad = (num) => String(num).padStart(2, "0");
+    return `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`;
+}
