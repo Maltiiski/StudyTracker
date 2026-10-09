@@ -7,26 +7,6 @@ function setTimerState(state) {
     controls.className = `control state-${state}`;
 }
 
-document.getElementById('start-btn').addEventListener('click', () => {
-    setTimerState('running')
-    state = 1
-});
-
-document.getElementById('pause-btn').addEventListener('click', () => {
-    setTimerState('paused')
-    state = 2
-});
-
-document.getElementById('resume-btn').addEventListener('click', () => {
-    setTimerState('running')
-    state = 1
-});
-
-document.getElementById('stop-btn').addEventListener('click', () => {
-    setTimerState('idle')
-    state = 0
-});
-
 document.getElementById('sendsubjbtn').addEventListener('click', () => {
     const selcRadio = document.querySelector('input[name="subj-opt"]:checked');
     if  (selcRadio) {
@@ -75,10 +55,25 @@ function formatTime(ms) {
     const seconds = totalsec % 60;
 
     const pad = (num) => String(num).padStart(2, "0");
-    return `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`;
+    return `${pad(hours)} : ${pad(minutes)} : ${pad(seconds)}`;
 }
 
 function startTimer() {
+    elapsedTime = 0;
+    startTime = performance.now();
+
+    timerInterval = setInterval(() => {
+        elapsedTime = performance.now() - startTime;
+        TimerDisplay.textContent = formatTime(elapsedTime);
+    }, 1000);
+}
+
+function pauseTimer() {
+    clearInterval(timerInterval);
+    timerInterval = null;
+}
+
+function resumeTimer() {
     startTime = performance.now() - elapsedTime;
 
     timerInterval = setInterval(() => {
@@ -86,3 +81,37 @@ function startTimer() {
         TimerDisplay.textContent = formatTime(elapsedTime);
     }, 1000);
 }
+
+function stopTimer() {
+    clearInterval(timerInterval);
+    timerInterval = null;
+    elapsedTime = 0;
+
+    TimerDisplay.textContent = "00 : 00 : 00";
+}
+
+document.getElementById('start-btn').addEventListener('click', () => {
+    if (subject) {
+        setTimerState('running')
+        startTimer()
+        state = 1
+    }
+});
+
+document.getElementById('pause-btn').addEventListener('click', () => {
+    setTimerState('paused')
+    pauseTimer()
+    state = 2
+});
+
+document.getElementById('resume-btn').addEventListener('click', () => {
+    setTimerState('running')
+    resumeTimer()
+    state = 1
+});
+
+document.getElementById('stop-btn').addEventListener('click', () => {
+    setTimerState('idle')
+    stopTimer()
+    state = 0
+});
