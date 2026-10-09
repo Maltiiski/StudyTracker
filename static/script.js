@@ -36,20 +36,25 @@ document.getElementById('sendsubjbtn').addEventListener('click', () => {
         alert('Please select an option first!')
     }
 
-    if (subject) {
-        if (subject=='Math') {
+    switch (subject) {
+        case 'Math':
             subjpicked.textContent = 'Mathematics'
-        } else if (subject=='Lang') {
-            subjpicked.textContent = 'Language'
-        } else if (subject=='Inf') {
+            break;
+        case 'Lang':
+            subjpicked.textContent = 'Languages'
+            break;
+        case 'Inf':
             subjpicked.textContent = 'Informatik'
-        } else if (subject=='Natscie') {
+            break;
+        case 'Natscie':
             subjpicked.textContent = 'Natural Sciences'
-        } else if (subject=='Sostud') {
+            break;
+        case 'Sostud':
             subjpicked.textContent = 'Social Studies'
-        }
-    } else {
-        subjpicked.textContent = 'Not Selected'
+            break;
+        default:
+            subjpicked.textContent = 'Not Selected'
+            break;
     }
 });
 
